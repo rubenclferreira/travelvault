@@ -11,13 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122201002) do
+ActiveRecord::Schema.define(version: 20160123200838) do
 
   create_table "journeys", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "origin"
+    t.string   "destiny"
+    t.decimal  "total_expense"
+    t.decimal  "total_distance"
   end
 
   create_table "users", force: :cascade do |t|
