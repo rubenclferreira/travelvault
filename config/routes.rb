@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :accommodations
   root to: 'journeys#index'
   resources :journeys
   devise_for :users
