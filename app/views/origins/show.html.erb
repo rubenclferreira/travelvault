@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @origin.location %>
+</p>
+
+<p>
+  <strong>Departure:</strong>
+  <%= @origin.departure %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @origin.date %>
+</p>
+
+<p>
+  <strong>Airline:</strong>
+  <%= @origin.airline %>
+</p>
+
+<%= link_to 'Edit', edit_origin_path(@origin) %> |
+<%= link_to 'Back', origins_path %>
