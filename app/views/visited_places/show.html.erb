@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @visited_place.Place %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @visited_place.Price %>
+</p>
+
+<%= link_to 'Edit', edit_visited_place_path(@visited_place) %> |
+<%= link_to 'Back', visited_places_path %>
