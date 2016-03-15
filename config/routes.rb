@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :visited_places
   resources :origins
   resources :accommodations
   root to: 'journeys#index'

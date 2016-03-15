@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Visited Places</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Place</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @visited_places.each do |visited_place| %>
+      <tr>
+        <td><%= visited_place.Place %></td>
+        <td><%= visited_place.Price %></td>
+        <td><%= link_to 'Show', visited_place %></td>
+        <td><%= link_to 'Edit', edit_visited_place_path(visited_place) %></td>
+        <td><%= link_to 'Destroy', visited_place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Visited place', new_visited_place_path %>
