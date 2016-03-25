@@ -1,0 +1,29 @@
+<%= form_for(@destiny) do |f| %>
+  <% if @destiny.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@destiny.errors.count, "error") %> prohibited this destiny from being saved:</h2>
+
+      <ul>
+      <% @destiny.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :airline %><br>
+    <%= f.text_field :airline %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

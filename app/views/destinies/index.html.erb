@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Destinies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Airline</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @destinies.each do |destiny| %>
+      <tr>
+        <td><%= destiny.location %></td>
+        <td><%= destiny.date %></td>
+        <td><%= destiny.airline %></td>
+        <td><%= link_to 'Show', destiny %></td>
+        <td><%= link_to 'Edit', edit_destiny_path(destiny) %></td>
+        <td><%= link_to 'Destroy', destiny, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Destiny', new_destiny_path %>
