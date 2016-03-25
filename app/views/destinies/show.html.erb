@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @destiny.location %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @destiny.date %>
+</p>
+
+<p>
+  <strong>Airline:</strong>
+  <%= @destiny.airline %>
+</p>
+
+<%= link_to 'Edit', edit_destiny_path(@destiny) %> |
+<%= link_to 'Back', destinies_path %>
